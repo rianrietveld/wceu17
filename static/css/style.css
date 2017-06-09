@@ -24,6 +24,10 @@ pre {
     background-color: beige;
 }
 
+code {
+    font-size: 0.9em;
+}
+
 .screen-reader-text {
     border: 0;
     clip: rect( 1px, 1px, 1px, 1px );
