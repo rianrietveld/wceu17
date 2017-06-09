@@ -13,38 +13,48 @@
 
 <body>
 
-<h1>Demo aria-label</h1>
+<header>
+    <h1>Demo aria-label</h1>
+</header>
 
-<p>Without aria-label:<br />
-<pre aria-hidden="true">
-    <code>
-        &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;&lt;/a&gt;
-    </code>
-</pre>
+<main>
+    <p>Without aria-label:<br />
+        <a href="https://twitter.com/WCEurope" class="fa fa-twitter"></a>
+    </p>
+    <pre aria-hidden="true">
+        <code>
+            &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;&lt;/a&gt;
+        </code>
+    </pre>
 
-<a href="https://twitter.com/WCEurope" class="fa fa-twitter"></a>
+    <hr />
 
-</p>
+    <p>With aria-label:<br />
+        <a href="https://twitter.com/WCEurope" class="fa fa-twitter" aria-label="WCEU on Twitter"></a>
+    </p>
 
-<p>With aria-label:<br />
-<pre aria-hidden="true">
-    <code>
-        &lt;a href="https://twitter.com/WCEurope" aria-label="WCEU on Twitter" class="fa fa-twitter"&gt;&lt;/a&gt;
-    </code>
-</pre>
+    <pre aria-hidden="true">
+        <code>
+            &lt;a href="https://twitter.com/WCEurope" aria-label="WCEU on Twitter" class="fa fa-twitter"&gt;&lt;/a&gt;
+        </code>
+    </pre>
 
-<a href="https://twitter.com/WCEurope" class="fa fa-twitter" aria-label="WCEU on Twitter"></a>
-</p>
+    <hr />
 
-<p>But beware: aria-label overrides link text:<br />
-<pre aria-hidden="true">
-    <code>
-        &lt;a href="https://www.facebook.com/WordCampEurope" aria-label="WCEU on Twitter" class="fa fa-facebook"&gt;WCEU on Facebook&lt;/a&gt;
-    </code>
-</pre>
+    <p>But beware: aria-label overrides link text:<br />
+        <a href="https://www.facebook.com/WordCampEurope" class="fa fa-facebook" aria-label="WCEU on Twitter">
+            WCEU on Facebook
+        </a>
+    </p>
+    <pre aria-hidden="true">
+        <code>
+            &lt;a href="https://www.facebook.com/WordCampEurope" aria-label="WCEU on Twitter" class="fa fa-facebook"&gt;
+              WCEU on Facebook
+            &lt;/a&gt;
+        </code>
+    </pre>
 
-<a href="https://www.facebook.com/WordCampEurope" class="fa fa-facebook" aria-label="WCEU on Twitter"> WCEU on Facebook</a>
-</p>
+</main>
 
 <footer>
     <p><a href="/wceu17/">Back to overview</a></p>

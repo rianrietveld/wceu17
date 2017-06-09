@@ -13,96 +13,101 @@
 
 <body>
 
-<h1>Demo aria-hidden</h1>
+<header>
+    <h1>Demo aria-hidden</h1>
+</header>
 
-<p>Without aria-hidden</p>
+<main>
+    <p>Without aria-hidden</p>
 
-<pre aria-hidden="true">
-    <code>
-        &lt;h2&gt;&lt;a href="https://wordpress.org"&gt;Meet WordPress&lt;/a&gt;&lt;/h2&gt;
+    <pre aria-hidden="true">
+        <code>
+            &lt;h2&gt;&lt;a href="https://wordpress.org"&gt;Meet WordPress&lt;/a&gt;&lt;/h2&gt;
 
-        &lt;p&gt;
+            &lt;p&gt;
 
-            &lt;a class="post-thumbnail" href="https://wordpress.org"&gt;
-                &lt;img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress" /&gt;
-            &lt;/a&gt;
+                &lt;a class="post-thumbnail" href="https://wordpress.org"&gt;
+                    &lt;img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress" /&gt;
+                &lt;/a&gt;
 
-            WordPress is open source software you can use to create a beautiful website, blog, or app.&lt;/p&gt;
-            &lt;p&gt;Beautiful designs, powerful features, and the freedom to build anything you want.
-            WordPress is both free and priceless at the same time.
+                WordPress is open source software you can use to create a beautiful website, blog, or app.&lt;/p&gt;
+                &lt;p&gt;Beautiful designs, powerful features, and the freedom to build anything you want.
+                WordPress is both free and priceless at the same time.
 
-            &lt;a href="https://wordpress.org"&gt;Read More...&lt;/a&gt;
+                &lt;a href="https://wordpress.org"&gt;Read More...&lt;/a&gt;
 
-        &lt;/p&gt;
-    </code>
-</pre>
+            &lt;/p&gt;
+        </code>
+    </pre>
 
-<h2><a href="https://wordpress.org">Meet WordPress</a></h2>
-<p><a class="post-thumbnail" href="https://wordpress.org">
-    <img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress" />
-</a>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
-<p>Beautiful designs, powerful features, and the freedom to build anything you want.
-    WordPress is both free and priceless at the same time.
-    <a href="https://wordpress.org">Read More...</a></p>
-
-
+    <h2><a href="https://wordpress.org">Meet WordPress</a></h2>
+    <p><a class="post-thumbnail" href="https://wordpress.org">
+        <img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress" />
+    </a>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
+    <p>Beautiful designs, powerful features, and the freedom to build anything you want.
+        WordPress is both free and priceless at the same time.
+        <a href="https://wordpress.org">Read More...</a></p>
 
 
-<p>With aria-hidden</p>
-<pre aria-hidden="true">
-    <code>
-        &lt;h2&gt;&lt;a href="https://wordpress.org"&gt;Meet WordPress with aria-hidden&lt;/a&gt;&lt;/h2&gt;
 
-        &lt;p&gt;
 
-            &lt;a class="post-thumbnail" href="https://wordpress.org" aria-hidden="true"&gt;
-                &lt;img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden" /&gt;
-            &lt;/a&gt;
+    <p>With aria-hidden</p>
+    <pre aria-hidden="true">
+        <code>
+            &lt;h2&gt;&lt;a href="https://wordpress.org"&gt;Meet WordPress with aria-hidden&lt;/a&gt;&lt;/h2&gt;
 
-            WordPress is open source software you can use to create a beautiful website, blog, or app.&lt;/p&gt;
-            &lt;p&gt;Beautiful designs, powerful features, and the freedom to build anything you want.
-            WordPress is both free and priceless at the same time.
+            &lt;p&gt;
 
-            &lt;a href="https://wordpress.org" aria-hidden="true"&gt;Read More...&lt;/a&gt;
+                &lt;a class="post-thumbnail" href="https://wordpress.org" aria-hidden="true"&gt;
+                    &lt;img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden" /&gt;
+                &lt;/a&gt;
 
-        &lt;/p&gt;
-    </code>
-</pre>
+                WordPress is open source software you can use to create a beautiful website, blog, or app.&lt;/p&gt;
+                &lt;p&gt;Beautiful designs, powerful features, and the freedom to build anything you want.
+                WordPress is both free and priceless at the same time.
 
-<h2><a href="https://wordpress.org">Meet WordPress with aria-hidden</a></h2>
-<p><a class="post-thumbnail" href="https://wordpress.org" aria-hidden="true">
-    <img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden" />
-</a>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
-<p>Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.
-    <a href="https://wordpress.org" aria-hidden="true">Read More...</a></p>
+                &lt;a href="https://wordpress.org" aria-hidden="true"&gt;Read More...&lt;/a&gt;
 
-<p>With aria-hidden and tabindex=-1</p>
-<pre aria-hidden="true">
-    <code>
-        &lt;h2&gt;&lt;a href="https://wordpress.org"&gt;Meet WordPress with aria-hidden and tabindex=-1&lt;/a&gt;&lt;/h2&gt;
+            &lt;/p&gt;
+        </code>
+    </pre>
 
-        &lt;p&gt;
+    <h2><a href="https://wordpress.org">Meet WordPress with aria-hidden</a></h2>
+    <p><a class="post-thumbnail" href="https://wordpress.org" aria-hidden="true">
+        <img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden" />
+    </a>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
+    <p>Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.
+        <a href="https://wordpress.org" aria-hidden="true">Read More...</a></p>
 
-            &lt;a class="post-thumbnail" href="https://wordpress.org" aria-hidden="true" tabindex="-1"&gt;
-                &lt;img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden and tabindex=-1" /&gt;
-            &lt;/a&gt;
+    <p>With aria-hidden and tabindex=-1</p>
+    <pre aria-hidden="true">
+        <code>
+            &lt;h2&gt;&lt;a href="https://wordpress.org"&gt;Meet WordPress with aria-hidden and tabindex=-1&lt;/a&gt;&lt;/h2&gt;
 
-            WordPress is open source software you can use to create a beautiful website, blog, or app.&lt;/p&gt;
-            &lt;p&gt;Beautiful designs, powerful features, and the freedom to build anything you want.
-            WordPress is both free and priceless at the same time.
+            &lt;p&gt;
 
-            &lt;a href="https://wordpress.org" aria-hidden="true"  tabindex="-1"&gt;Read More...&lt;/a&gt;
+                &lt;a class="post-thumbnail" href="https://wordpress.org" aria-hidden="true" tabindex="-1"&gt;
+                    &lt;img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden and tabindex=-1" /&gt;
+                &lt;/a&gt;
 
-        &lt;/p&gt;
-    </code>
-</pre>
+                WordPress is open source software you can use to create a beautiful website, blog, or app.&lt;/p&gt;
+                &lt;p&gt;Beautiful designs, powerful features, and the freedom to build anything you want.
+                WordPress is both free and priceless at the same time.
 
-<h2><a href="https://wordpress.org">Meet WordPress with aria-hidden and tabindex=-1</a></h2>
-<p><a class="post-thumbnail" href="https://wordpress.org"  aria-hidden="true"  tabindex="-1">
-    <img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden and tabindex=-1" />
-</a>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
-<p>Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.
-    <a href="https://wordpress.org" aria-hidden="true"  tabindex="-1">Read More...</a></p>
+                &lt;a href="https://wordpress.org" aria-hidden="true"  tabindex="-1"&gt;Read More...&lt;/a&gt;
+
+            &lt;/p&gt;
+        </code>
+    </pre>
+
+    <h2><a href="https://wordpress.org">Meet WordPress with aria-hidden and tabindex=-1</a></h2>
+    <p><a class="post-thumbnail" href="https://wordpress.org"  aria-hidden="true"  tabindex="-1">
+        <img width="150" height="150" src="../images/logo-wp.png" alt="Meet WordPress with aria-hidden and tabindex=-1" />
+    </a>WordPress is open source software you can use to create a beautiful website, blog, or app.</p>
+    <p>Beautiful designs, powerful features, and the freedom to build anything you want. WordPress is both free and priceless at the same time.
+        <a href="https://wordpress.org" aria-hidden="true"  tabindex="-1">Read More...</a></p>
+
+</main>
 
 <footer>
     <p><a href="/wceu17/">Back to overview</a></p>

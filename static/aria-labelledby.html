@@ -12,40 +12,44 @@
 
 <body>
 
-<h1>Demo aria-labelledby</h1>
+<header>
+    <h1>Demo aria-labelledby</h1>
+</header>
 
-<p>Without aria-label:<br />
+<main>
+    <p>Without aria-label:<br />
+        <pre>
+            <code>
+            &lt;label for="alb1"&gt;Name&lt;/label&gt;
+            &lt;input id="alb1" type="text"&gt;
+            &lt;p&gt;Please give your first and last name&lt;/p&gt;
+            </code>
+        </pre>
+    </p>
+
+    <form>
+        <label for="alb1">Name</label>
+        <input id="alb1" type="text">
+        <p>Please give your first and last name</p>
+    </form>
+
+
+    <p>With aria-label:<br />
     <pre>
-        <code>
-        &lt;label for="alb1"&gt;Name&lt;/label&gt;
-        &lt;input id="alb1" type="text"&gt;
-        &lt;p&gt;Please give your first and last name&lt;/p&gt;
-        </code>
-    </pre>
-</p>
+            <code>
+            &lt;label for="alb1" aria-labelledby="alb2-description"&gt;Name&lt;/label&gt;
+            &lt;input id="alb1" type="text"&gt;
+            &lt;p id="alb2-description"&gt;Please give your first and last name&lt;/p&gt;
+            </code>
+        </pre>
+    </p>
 
-<form>
-    <label for="alb1">Name</label>
-    <input id="alb1" type="text">
-    <p>Please give your first and last name</p>
-</form>
-
-
-<p>With aria-label:<br />
-<pre>
-        <code>
-        &lt;label for="alb1" aria-labelledby="alb2-description"&gt;Name&lt;/label&gt;
-        &lt;input id="alb1" type="text"&gt;
-        &lt;p id="alb2-description"&gt;Please give your first and last name&lt;/p&gt;
-        </code>
-    </pre>
-</p>
-
-<form>
-    <label for="alb2" aria-labelledby="alb2-description">Name</label>
-    <input id="alb2" type="text">
-    <p id="alb2-description">Please give your first and last name</p>
-</form>
+    <form>
+        <label for="alb2" aria-labelledby="alb2-description">Name</label>
+        <input id="alb2" type="text">
+        <p id="alb2-description">Please give your first and last name</p>
+    </form>
+</main>
 
 <footer>
     <p><a href="/wceu17/">Back to overview</a></p>

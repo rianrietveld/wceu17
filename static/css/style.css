@@ -73,3 +73,7 @@ button.expandable + [aria-hidden="false"] {
     width: 50%;
     height: 50%;
 }
+
+footer {
+    border-top: solid 1px #666;
+}
