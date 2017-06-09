@@ -9,11 +9,22 @@ body {
 
 header {
     border-bottom: solid 2px #666;
+    margin-bottom: 2em;
+}
+
+main {
+    min-height: 20em;
+}
+
+footer {
+    border-top: solid 2px #666;
+    margin-top: 2em;
 }
 
 hr {
     margin: 2em 0;
 }
+
 a.fa,
 span.fa {
     text-decoration: none;
@@ -86,6 +97,8 @@ button.expandable + [aria-hidden="false"] {
     height: 50%;
 }
 
-footer {
-    border-top: solid 2px #666;
+
+.form-chars-remaining textarea {
+    width:20em;
+    height:5em;
 }
