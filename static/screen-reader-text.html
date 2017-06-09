@@ -18,66 +18,72 @@
 </header>
 
 <main>
-    <p>
-        <pre aria-hidden="true">
-            <code>
-                &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;&lt;/a&gt;
-            </code>
-        </pre>
 
+    <p>Empty link:<br />
         <a href="https://twitter.com/WCEurope" class="fa fa-twitter"></a>
     </p>
 
-    <p>With the .screen-reader-text class<br />
     <pre aria-hidden="true">
-            <code>
-                &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;
-                    &lt;span class="screen-reader-text">WCEU on Twitter&lt;/span&gt;
-                &lt;/a&gt;
-            </code>
-        </pre>
-
-    <a href="https://twitter.com/WCEurope" class="fa fa-twitter"><span class="screen-reader-text">WCEU on Twitter</span></a>
-    </p>
-
-    <p>
-    Hide label from sight:
-    <pre aria-hidden="true">
-        <code>
-            &lt;label for="s" class="screen-reader-text"&gt;Search&lt;/label&gt;
-            &lt;input id="s" type="text"&gt;
-
-            &lt;input type="submit" value="Search"&gt;
-        </code>
+    <code>
+        &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;&lt;/a&gt;
+    </code>
     </pre>
 
+    <hr />
+
+    <p>Link text hidden with the .screen-reader-text class:<br />
+        <a href="https://twitter.com/WCEurope" class="fa fa-twitter"><span class="screen-reader-text">WCEU on Twitter</span></a>
+    </p>
+    <pre aria-hidden="true">
+    <code>
+        &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;
+            &lt;span class="screen-reader-text">WCEU on Twitter&lt;/span&gt;
+        &lt;/a&gt;
+    </code>
+    </pre>
+
+    <hr />
+
+    <p>
+        Hide form label from sight:
+    </p>
     <form>
         <label for="s" class="screen-reader-text">Search this site</label>
         <input id="s" type="text">
         <input type="submit" value="Search">
     </form>
-    </p>
-
-    <p>Add an extra heading for semantics, adding context or convenience:
 
     <pre aria-hidden="true">
-        <code>
-            &lt;h2 class="screen-reader-text"&gt;House pets&lt;/h2&gt;
-            &lt;ul&gt;
-                &lt;li&gt;Cats&lt;/li&gt;
-                &lt;li&gt;Dogs&lt;/li&gt;
-                &lt;li&gt;Rabbits&lt;/li&gt;
-            &lt;/ul&gt;
-        </code>
+    <code>
+        &lt;label for="s" class="screen-reader-text"&gt;Search&lt;/label&gt;
+        &lt;input id="s" type="text"&gt;
+
+        &lt;input type="submit" value="Search"&gt;
+    </code>
     </pre>
 
+    <hr />
+
+    <p>Add an extra heading for semantics, adding context or convenience:</p>
     <h2 class="screen-reader-text">House pets</h2>
     <ul>
         <li>Cats</li>
         <li>Dogs</li>
         <li>Rabbits</li>
     </ul>
-    </p>
+
+    <pre aria-hidden="true">
+    <code>
+        &lt;h2 class="screen-reader-text"&gt;House pets&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Cats&lt;/li&gt;
+            &lt;li&gt;Dogs&lt;/li&gt;
+            &lt;li&gt;Rabbits&lt;/li&gt;
+        &lt;/ul&gt;
+    </code>
+    </pre>
+
+    <hr />
 
     <h2 aria-hidden="true">CSS screen-reader-text</h2>
     <pre aria-hidden="true">
