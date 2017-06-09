@@ -1,15 +1,23 @@
 body {
-    width: 60em;
-    margin: 1em auto;
+    max-width: 40em;
+    margin: 2em auto;
+    line-height: 1.5em;
 
     font-family: -apple-system,sans-serif;
     font-size: 1.2em;
 }
 
-a.fa {
+header {
+    border-bottom: solid 2px #666;
+}
+
+hr {
+    margin: 2em 0;
+}
+a.fa,
+span.fa {
     text-decoration: none;
     font-size: 2em;
-
 }
 
 pre {
@@ -75,5 +83,5 @@ button.expandable + [aria-hidden="false"] {
 }
 
 footer {
-    border-top: solid 1px #666;
+    border-top: solid 2px #666;
 }

@@ -18,41 +18,65 @@
 </header>
 
 <main>
-    <p>Without aria-label:<br />
-        <a href="https://twitter.com/WCEurope" class="fa fa-twitter"></a>
-    </p>
-    <pre aria-hidden="true">
-        <code>
-            &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;&lt;/a&gt;
-        </code>
-    </pre>
+<p>Without aria-label:<br />
+    <a href="https://twitter.com/WCEurope" class="fa fa-twitter"></a>
+</p>
+<pre aria-hidden="true">
+    <code>
+        &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;
+        &lt;/a&gt;
+    </code>
+</pre>
 
-    <hr />
+<hr />
 
-    <p>With aria-label:<br />
-        <a href="https://twitter.com/WCEurope" class="fa fa-twitter" aria-label="WCEU on Twitter"></a>
-    </p>
+<p>With aria-label:<br />
+    <a href="https://twitter.com/WCEurope" class="fa fa-twitter"
+       aria-label="WCEU on Twitter">
+    </a>
 
-    <pre aria-hidden="true">
-        <code>
-            &lt;a href="https://twitter.com/WCEurope" aria-label="WCEU on Twitter" class="fa fa-twitter"&gt;&lt;/a&gt;
-        </code>
-    </pre>
 
-    <hr />
+</p>
 
-    <p>But beware: aria-label overrides link text:<br />
-        <a href="https://www.facebook.com/WordCampEurope" class="fa fa-facebook" aria-label="WCEU on Twitter">
-            WCEU on Facebook
+<pre aria-hidden="true">
+<code>
+  &lt;a href="https://twitter.com/WCEurope"
+    aria-label="WCEU on Twitter"
+    class="fa fa-twitter"&gt;
+  &lt;/a&gt;
+</code>
+</pre>
+
+<hr />
+
+<p>But beware: aria-label overrides link text:<br />
+    <a href="https://www.facebook.com/WordCampEurope" class="fa fa-facebook" aria-label="WCEU on Twitter">
+        WCEU on Facebook
+    </a>
+</p>
+<pre aria-hidden="true">
+    <code>
+        &lt;a href="https://www.facebook.com/WordCampEurope"
+          aria-label="WCEU on Twitter"
+          class="fa fa-facebook"&gt;
+          WCEU on Facebook
+        &lt;/a&gt;
+    </code>
+</pre>
+
+<p>Pest practice: don't use ARIA<br />
+        <a href="https://twitter.com/WCEurope" class="fa fa-twitter">
+            <span class="screen-reader-text">WCEU on Twitter</span>
         </a>
     </p>
     <pre aria-hidden="true">
-        <code>
-            &lt;a href="https://www.facebook.com/WordCampEurope" aria-label="WCEU on Twitter" class="fa fa-facebook"&gt;
-              WCEU on Facebook
-            &lt;/a&gt;
-        </code>
-    </pre>
+    <code>
+    &lt;a href="href="https://twitter.com/WCEurope" class="fa fa-twitter">
+        &lt;span class="screen-reader-text">WCEU on Twitter&lt;/span>
+    &lt;/a&gt;
+    </code>
+</pre>
+
 
 </main>
 
