@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Characters Remaining Counter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+    <style type="text/css">
+        header {
+            position: relative;
+            text-align: center;
+        }
+        footer {
+            font-size: smaller;
+            margin-top: 2em;
+            text-align: center;
+        }
+        body>div>div, header {
+            margin: 0 auto;
+            max-width: 960px;
+            padding: 0 1em;
+            position: relative;
+        }
+
+        #example-form {
+
+        }
+
+
+        .field label {
+            vertical-align: top;
+            display: block;
+        }
+        .field input[type=text] {
+            width:300px;
+            border: 1px solid #999;
+            padding:4px;
+        }
+
+        .field textarea {
+            border: 1px solid #999;
+            width:300px;
+            height:5em;
+            padding:5px;
+        }
+
+        #zero-characters {
+            display: none;
+            position: absolute;
+            width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            top: 150px;
+            z-index: 15;
+            background-color: #fff;
+            border: 5px solid #ccc;
+        }
+
+        #zero-characters h2 {
+            margin: 0;
+            padding-top: 0;
+            background-color: #ccc;
+        }
+
+        .offscreen, .offscreen p {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px 1px 1px 1px); /* old ie */
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        #close-char-modal:focus {
+            outline: 2px solid;
+        }
+
+        .md {
+            background-color: #eee;
+            padding: 3px;
+            color: #000;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="fullContainer">
+    <header role="banner">
+        <h1>Characters Remaining Counter</h1>
+    </header>
+    <div>
+        <main role="main">
+            <div>
+
+                <form method="GET" id="example-form">
+                    <div class="field">
+                        <label for="email">Email:</label>
+                        <input id="email" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="subject">Subject:</label>
+                        <input id="subject" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message"  aria-describedby="chars-remaining"></textarea>
+                    </div>
+                    <div id="chars-remaining">
+        <span id="live-region-text" aria-live="polite">
+        <span class="count">150</span> characters remaining
+        </span>
+                        of 150 characters
+                    </div>
+
+                </form>
+                <div id="zero-characters" tabindex="-1" role="alertdialog" aria-labelledby="admessagehead1" aria-describedby="admessagebody1">
+                    <h2 id="admessagehead1">Maximum Characters Exceeded</h2>
+                    <p id="admessagebody1">Please limit your message to 150 characters.  Additional characters will not be entered.</p>
+                    <a href="#" id="close-char-modal">Close</a>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+    <footer role="contentinfo">
+
+        <p>
+            This example is from <a href="https://dequeuniversity.com/">Deque University</a>.
+        </p>
+
+        <p><a href="/wceu17/">Back to overview</a></p>
+
+    </footer>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(charsRemaining);
+
+    var politeIdx = 0;
+
+    function charsRemaining() {
+        var cachedLength;
+        var politeQueue = true;
+        var alreadyAlerted = false;
+        // the total number of characters allowed:
+        var totalChars = 150;
+        // the number of characters that
+        // triggers the polite announcement:
+        var politeFlag = 80;
+        // the number of characters that
+        // triggers the assertive announcement:
+        var assertiveFlag = 130;
+        var $message = $('#message');
+        var $alertDialog = $('#zero-characters');
+        var $close = $('#close-char-modal');
+
+        $message.attr('maxlength', totalChars);
+
+        $message.on('keyup', function (e) {
+            // maxlength polyfill:
+            // Get the value
+            var text = $(this).val();
+            // Get the maxlength
+            var limit = $(this).attr('maxlength') || totalChars;
+            // Check if the length exceeds what is permitted
+            if(text.length > limit){
+                // Truncate the text if necessary
+                $(this).val(text.substr(0, limit));
+            }
+
+            // chars remaining / alert dialog:
+            var realLength = $message.val().length;
+            var remaining = totalChars - realLength;
+            updateRemaining(remaining);
+            if (remaining <= 0) {
+                if (!alreadyAlerted) {
+                    // show the dialog
+                    cachedLength = null;
+                    $alertDialog.show();
+                    $('#close-char-modal')
+                        .first()
+                        .focus();
+                }
+            }
+
+            // if we have set the cachedLength (when the dialog was closed),
+            // lets check if the length has changed, and if it has, reset the
+            // alert boolean.
+            if (cachedLength && alreadyAlerted) {
+                // check if it has changed...
+                if (cachedLength !== $message.val().length) {
+                    alreadyAlerted = false;
+                }
+            }
+
+            // 70-60 atomic true
+            // 60 set it to false
+            // 20 atomic true
+
+            if (realLength >= politeFlag && realLength < assertiveFlag) {
+                // polite announcement...
+                $('#live-region-text').attr('aria-live', 'polite');
+
+                if (realLength >= 90) {
+                    $('#live-region-text').attr('aria-atomic', 'false');
+                } else {
+                    $('#live-region-text').attr('aria-atomic', 'true');
+                }
+            } else if (realLength >= assertiveFlag) {
+                // assertive announcement...
+                $('#live-region-text').attr({
+                    'aria-live': 'assertive',
+                    'aria-atomic': 'true'
+                });
+            } else { // clean up (remove the aria-live and aria-atomic attributes)
+                $('#live-region-text')
+                    .removeAttr('aria-live')
+                    .removeAttr('aria-atomic');
+            }
+        });
+
+        $alertDialog.on('keydown', function (e) {
+            var which = e.which;
+            if (which === 9) {
+                e.preventDefault();
+            } else if (which === 27) {
+                $close.click();
+            }
+        });
+
+        $close.on('click', function (e) {
+            e.preventDefault(); // since its a link, we don't want scroll to occur
+            // close the dialog
+            $alertDialog.hide();
+            alreadyAlerted = true;
+            setTimeout(function () {
+                $message.focus();
+                cachedLength = $message.val().length;
+            }, 0);
+        });
+    }
+
+
+    function updateRemaining(charsLeft) {
+        $('#chars-remaining .count').html(charsLeft);
+    }
+
+    function nonSpecialKey(code) {
+        var nonSpecial = false;
+        if ((code >= 48 && code <= 57) || (code >= 65 && code <= 90)) {
+            nonSpecial = true;
+        }
+
+        return nonSpecial;
+    }
+
+    function noAtomic(num) {
+        var stringNum = num.toString();
+        var lastDigit = parseInt(stringNum[stringNum.length - 1], 10);
+
+        return lastDigit !== 0 && lastDigit !== 5;
+    }
+
+</script>
+</body>
+</html>
+                

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Demo aria-describedby</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Demo aria-describedby</h1>
+</header>
+
+<main>
+    <p>Without aria-describedby: </p>
+        <pre>
+            <code>
+            &lt;label for="alb1"&gt;Name&lt;/label&gt;
+            &lt;input id="alb1" type="text"&gt;
+            &lt;p&gt;Please give your first and last name&lt;/p&gt;
+            </code>
+        </pre>
+
+
+    <fieldset>
+        <label for="alb1">Name</label>
+        <input id="alb1" type="text">
+        <p>Please give your first and last name</p>
+    </fieldset>
+
+
+    <p>With aria-label: </p>
+    <pre>
+
+
+
+            <code>
+            &lt;label for="alb1"&gt;Name&lt;/label&gt;
+            &lt;input id="alb1" type="text" aria-describedby="alb2-description"&gt;
+            &lt;p id="alb2-description"&gt;Please give your first and last name&lt;/p&gt;
+            </code>
+        </pre>
+
+
+    <form>
+        <label for="alb2">Name</label>
+        <input id="alb2" type="text" aria-describedby="alb2-description">
+        <p id="alb2-description">Please give your first and last name</p>
+    </form>
+
+    <p>Beware: aria-describedby can overrule the placeholder:</p>
+    <form>
+        <label for="alb3">Name</label>
+        <input id="alb3" type="text" aria-describedby="alb3-description" placeholder="first and last name">
+        <p id="alb3-description">Please give your first and last name</p>
+    </form>
+
+
+
+</main>
+
+<footer>
+    <p><a href="/wceu17/">Back to overview</a></p>
+</footer>
+
+</body>
+</html>

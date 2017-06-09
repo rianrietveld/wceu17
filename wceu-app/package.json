@@ -1,0 +1,25 @@
+{
+  "name": "wceu-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demos for WordCamp Euopre 2017",
+  "author": "Rian Rietveld",
+  "homepage": "/wceu17/wceu-app/build/",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "react-search-input": "^0.11.2"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

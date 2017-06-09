@@ -1,0 +1,75 @@
+body {
+    width: 60em;
+    margin: 1em auto;
+
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2em;
+}
+
+a.fa {
+    text-decoration: none;
+    font-size: 2em;
+
+}
+
+pre {
+    background-color: beige;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect( 1px, 1px, 1px, 1px );
+    clip-path: inset( 50% );
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
+
+.screen-reader-text:focus {
+    clip: auto;
+    clip-path: none;
+    display: block;
+    left: 0.5em;
+    top: 0.5em;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+.post-thumbnail {
+    padding: 0 50px 50px 0;
+    float: left;
+}
+
+button.expandable {
+    background: #555;
+    border: 0;
+    color: #eee;
+    font-size: 2em;
+    padding: 0.5em;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    width: auto;
+}
+
+button.expandable + [aria-hidden] {
+    display: none;
+}
+
+button.expandable + [aria-hidden="false"] {
+    display: block;
+}
+
+.expanded-content {
+    padding: 1em 0;
+}
+
+.expanded-content img {
+    width: 50%;
+    height: 50%;
+}

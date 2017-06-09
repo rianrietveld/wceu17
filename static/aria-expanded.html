@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Demo aria-describedby</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/aria-support.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Demo aria-expanded with jQuery</h1>
+</header>
+
+<main>
+
+    <button aria-expanded="false" aria-controls="collapsible-0" class="expandable">Show me a cute kitten</button>
+    <div id="collapsible-0" aria-hidden="true" class="expanded-content">
+        <img src="images/cat.jpg" alt="cat">
+    </div>
+
+</main>
+
+<footer>
+    <p><a href="/wceu17/">Back to overview</a></p>
+</footer>
+
+</body>
+</html>
