@@ -4,7 +4,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className='home-container'>
-                <h1>Accessibility and dynamic content</h1>
+                <h1 aria-live="polite">Accessibility and dynamic content</h1>
                 <p>Demos</p>
             </div>
         )

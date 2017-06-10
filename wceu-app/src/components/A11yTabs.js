@@ -48,7 +48,7 @@ class Tabs extends React.Component {
     }
     render () {
         return (<div>
-            <h1>Tabs using semantic elements and ARIA</h1>
+            <h1 aria-live="polite">Tabs using semantic elements and ARIA</h1>
             <ul role="tablist">
                 {this.tabs.map((tab, i) => (
                     <li role="presentation">
