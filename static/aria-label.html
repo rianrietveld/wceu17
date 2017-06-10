@@ -7,7 +7,6 @@
     <title>Demo aria-label</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
 
 </head>
 
@@ -19,11 +18,12 @@
 
 <main>
 <p>Without aria-label:<br />
-    <a href="https://twitter.com/WCEurope" class="fa fa-twitter"></a>
+    <a href="#">edit</a>
 </p>
 <pre aria-hidden="true">
     <code>
-        &lt;a href="https://twitter.com/WCEurope" class="fa fa-twitter"&gt;
+        &lt;a href="your-url"&gt;
+        edit
         &lt;/a&gt;
     </code>
 </pre>
@@ -31,18 +31,17 @@
 <hr />
 
 <p>With aria-label:<br />
-    <a href="https://twitter.com/WCEurope" class="fa fa-twitter"
-       aria-label="WCEU on Twitter">
+    <a href="#"
+       aria-label="edit: my awesome post">
+        edit
     </a>
-
-
 </p>
 
 <pre aria-hidden="true">
 <code>
-  &lt;a href="https://twitter.com/WCEurope"
-    aria-label="WCEU on Twitter"
-    class="fa fa-twitter"&gt;
+  &lt;a href="your-url"
+    aria-label="edit: my awesome post"&gt;
+        edit
   &lt;/a&gt;
 </code>
 </pre>
@@ -50,29 +49,29 @@
 <hr />
 
 <p>But beware: aria-label overrides link text:<br />
-    <a href="https://www.facebook.com/WordCampEurope" class="fa fa-facebook" aria-label="WCEU on Twitter">
-        WCEU on Facebook
+    <a href="#"
+       aria-label="edit: my awesome post">
+        delete
     </a>
 </p>
 <pre aria-hidden="true">
     <code>
-        &lt;a href="https://www.facebook.com/WordCampEurope"
-          aria-label="WCEU on Twitter"
-          class="fa fa-facebook"&gt;
-          WCEU on Facebook
-        &lt;/a&gt;
+    &lt;a href="your-url"
+    aria-label="edit: my awesome post"&gt;
+        delete
+    &lt;/a&gt;
     </code>
 </pre>
 
-<p>Best practice: don't use ARIA<br />
-        <a href="https://twitter.com/WCEurope" class="fa fa-twitter">
-            <span class="screen-reader-text">WCEU on Twitter</span>
-        </a>
+<p>Or don't use ARIA<br />
+    <a href="#">
+        edit<span class="screen-reader-text">: my awesome post</span>
+    </a>
     </p>
     <pre aria-hidden="true">
     <code>
-    &lt;a href="href="https://twitter.com/WCEurope" class="fa fa-twitter">
-        &lt;span class="screen-reader-text">WCEU on Twitter&lt;/span>
+    &lt;a href="your-url"&gt;
+         edit&lt;span class="screen-reader-text">: my awesome post&lt;/span>
     &lt;/a&gt;
     </code>
 </pre>

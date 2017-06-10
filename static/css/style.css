@@ -71,7 +71,7 @@ button.expandable {
     background: #555;
     border: 0;
     color: #eee;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 0.5em;
     font-weight: 700;
     cursor: pointer;
@@ -93,10 +93,21 @@ button.expandable + [aria-hidden="false"] {
 }
 
 .expanded-content img {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height:auto;
 }
 
+blockquote {
+    font-size: 1.3em;
+    margin-left: 0;
+    padding-left: 1em;
+    border-left: 2px solid #555;
+}
+
+.expanded-content blockquote footer {
+    border: 0;
+    margin: 0;
+}
 
 .form-chars-remaining textarea {
     width:20em;
